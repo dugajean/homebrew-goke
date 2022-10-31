@@ -5,20 +5,20 @@
 class Goke < Formula
   desc ""
   homepage "https://github.com/dugajean/homebrew-goke"
-  version "0.2.2"
+  version "0.2.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/dugajean/goke/releases/download/0.2.2/goke_0.2.2_Darwin_x86_64.tar.gz"
-      sha256 "ddc68610a5626750fb431c76b4db2b54ce1f5feb6c8e74f7a884af64384f3d5a"
+      url "https://github.com/dugajean/goke/releases/download/0.2.3/goke_0.2.3_Darwin_x86_64.tar.gz"
+      sha256 "ce71adeee77240c0ad75231f436451b4c1bb91e6f47e848696812877779aa745"
 
       def install
         bin.install "goke"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/dugajean/goke/releases/download/0.2.2/goke_0.2.2_Darwin_arm64.tar.gz"
-      sha256 "2261444c958ceb780083529761fc16e83cb100071b9a5fd837ded8d53ac4fed2"
+      url "https://github.com/dugajean/goke/releases/download/0.2.3/goke_0.2.3_Darwin_arm64.tar.gz"
+      sha256 "67369eea910c7145b98d27a404c370dd38daecb7a4ad34a2de2594dd981126fc"
 
       def install
         bin.install "goke"
@@ -28,16 +28,16 @@ class Goke < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/dugajean/goke/releases/download/0.2.2/goke_0.2.2_Linux_x86_64.tar.gz"
-      sha256 "aebaf78663c4183bffc1b5ad162496784a4271ab1d7ff3fb54a05b6c4ecffaeb"
+      url "https://github.com/dugajean/goke/releases/download/0.2.3/goke_0.2.3_Linux_x86_64.tar.gz"
+      sha256 "d9a6ea1d337a0e8991fd6367e0a3fcf2b53c53cb3d9c4c759afd4e12b13df132"
 
       def install
         bin.install "goke"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dugajean/goke/releases/download/0.2.2/goke_0.2.2_Linux_arm64.tar.gz"
-      sha256 "64bea665a33ea05675c85ead02ba27c58ce581a82e1c968979cf5953391eed37"
+      url "https://github.com/dugajean/goke/releases/download/0.2.3/goke_0.2.3_Linux_arm64.tar.gz"
+      sha256 "126a3d8ea5488872207f23544a106a711a6fc56de52a01b6f16f233e78b76d8f"
 
       def install
         bin.install "goke"
