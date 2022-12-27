@@ -10,7 +10,7 @@ class Goke < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/dugajean/goke/releases/download/0.2.5/goke_0.2.5_Darwin_arm64.tar.gz"
-      sha256 "14a184e1a002e1b0c040bf3144917c50f1f0f22f9e47c8ec048ed218cb71464f"
+      sha256 "d3caa147b5b7b1fbc34c19da63571ad599a5cef255452fd4f4e7057c83acce07"
 
       def install
         bin.install "goke"
@@ -18,7 +18,7 @@ class Goke < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/dugajean/goke/releases/download/0.2.5/goke_0.2.5_Darwin_x86_64.tar.gz"
-      sha256 "1f902b38417841e07fc2b721687264f774b18470831a18fb8bdc15bed0bc31ae"
+      sha256 "ec87d3dae5d5084ded39d7b43babe100a56012b66cfd9e77326f7fbc0ae7a30d"
 
       def install
         bin.install "goke"
@@ -27,17 +27,17 @@ class Goke < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/dugajean/goke/releases/download/0.2.5/goke_0.2.5_Linux_x86_64.tar.gz"
-      sha256 "cf8f3793884c6b37828331d1f3f8ee4cd60f3ee41fe7f7711718c87a2758c29a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dugajean/goke/releases/download/0.2.5/goke_0.2.5_Linux_arm64.tar.gz"
+      sha256 "7c8520daaa3316da78373d7900c1360a3003e309c25f39da5f72c14cfd340719"
 
       def install
         bin.install "goke"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dugajean/goke/releases/download/0.2.5/goke_0.2.5_Linux_arm64.tar.gz"
-      sha256 "205bddd9e8679df242a194902148e21740c0b34c128b7d4d3eb2b4b0df3bad6e"
+    if Hardware::CPU.intel?
+      url "https://github.com/dugajean/goke/releases/download/0.2.5/goke_0.2.5_Linux_x86_64.tar.gz"
+      sha256 "73303b8e38da702979e71a15b950839803668a968839957da8e8a448f0c9482d"
 
       def install
         bin.install "goke"
