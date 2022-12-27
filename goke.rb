@@ -5,20 +5,20 @@
 class Goke < Formula
   desc ""
   homepage "https://github.com/dugajean/homebrew-goke"
-  version "0.2.4"
+  version "0.2.5"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/dugajean/goke/releases/download/0.2.4/goke_0.2.4_Darwin_x86_64.tar.gz"
-      sha256 "6dfcabaf4e3f2f960b80cba32aa490a4b160568253c7dd00cd32470df0168573"
+    if Hardware::CPU.arm?
+      url "https://github.com/dugajean/goke/releases/download/0.2.5/goke_0.2.5_Darwin_arm64.tar.gz"
+      sha256 "14a184e1a002e1b0c040bf3144917c50f1f0f22f9e47c8ec048ed218cb71464f"
 
       def install
         bin.install "goke"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/dugajean/goke/releases/download/0.2.4/goke_0.2.4_Darwin_arm64.tar.gz"
-      sha256 "bc47a03e739497657f98599b39490d6363e5ed8299e3faece488cf4694fab051"
+    if Hardware::CPU.intel?
+      url "https://github.com/dugajean/goke/releases/download/0.2.5/goke_0.2.5_Darwin_x86_64.tar.gz"
+      sha256 "1f902b38417841e07fc2b721687264f774b18470831a18fb8bdc15bed0bc31ae"
 
       def install
         bin.install "goke"
@@ -27,17 +27,17 @@ class Goke < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dugajean/goke/releases/download/0.2.4/goke_0.2.4_Linux_arm64.tar.gz"
-      sha256 "34ae556b07931faf9531b0037fd1546c62064897dd17c80c29e629e6c01c905c"
+    if Hardware::CPU.intel?
+      url "https://github.com/dugajean/goke/releases/download/0.2.5/goke_0.2.5_Linux_x86_64.tar.gz"
+      sha256 "cf8f3793884c6b37828331d1f3f8ee4cd60f3ee41fe7f7711718c87a2758c29a"
 
       def install
         bin.install "goke"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dugajean/goke/releases/download/0.2.4/goke_0.2.4_Linux_x86_64.tar.gz"
-      sha256 "2cb378316d4ca56c82d40ca9735cdfb0309ddcbb94afb8f254df76251e9bee7b"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dugajean/goke/releases/download/0.2.5/goke_0.2.5_Linux_arm64.tar.gz"
+      sha256 "205bddd9e8679df242a194902148e21740c0b34c128b7d4d3eb2b4b0df3bad6e"
 
       def install
         bin.install "goke"
