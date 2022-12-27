@@ -5,20 +5,20 @@
 class Goke < Formula
   desc ""
   homepage "https://github.com/dugajean/homebrew-goke"
-  version "0.2.5"
+  version "0.2.6"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/dugajean/goke/releases/download/0.2.5/goke_0.2.5_Darwin_arm64.tar.gz"
-      sha256 "d3caa147b5b7b1fbc34c19da63571ad599a5cef255452fd4f4e7057c83acce07"
+      url "https://github.com/dugajean/goke/releases/download/0.2.6/goke_0.2.6_Darwin_arm64.tar.gz"
+      sha256 "1e37699b0e4f2bbd788486bfce16bc013a41416de5cc1a46e4f8eae8404504d8"
 
       def install
         bin.install "goke"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/dugajean/goke/releases/download/0.2.5/goke_0.2.5_Darwin_x86_64.tar.gz"
-      sha256 "ec87d3dae5d5084ded39d7b43babe100a56012b66cfd9e77326f7fbc0ae7a30d"
+      url "https://github.com/dugajean/goke/releases/download/0.2.6/goke_0.2.6_Darwin_x86_64.tar.gz"
+      sha256 "cf8d9d46d37054e8ac2765d3ce241c97e19b5a75ce13e6dbc58f8dd117cbbdb8"
 
       def install
         bin.install "goke"
@@ -27,17 +27,17 @@ class Goke < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/dugajean/goke/releases/download/0.2.5/goke_0.2.5_Linux_arm64.tar.gz"
-      sha256 "7c8520daaa3316da78373d7900c1360a3003e309c25f39da5f72c14cfd340719"
+    if Hardware::CPU.intel?
+      url "https://github.com/dugajean/goke/releases/download/0.2.6/goke_0.2.6_Linux_x86_64.tar.gz"
+      sha256 "9574537831bfb9a8d561930ca15cead9a44face210b238e3c67a71f348f44b74"
 
       def install
         bin.install "goke"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/dugajean/goke/releases/download/0.2.5/goke_0.2.5_Linux_x86_64.tar.gz"
-      sha256 "73303b8e38da702979e71a15b950839803668a968839957da8e8a448f0c9482d"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/dugajean/goke/releases/download/0.2.6/goke_0.2.6_Linux_arm64.tar.gz"
+      sha256 "ab1190d029f69d8d3f6cba240ed0fb04f4847cd50aa0b64da089c37a3b8e5b6b"
 
       def install
         bin.install "goke"
